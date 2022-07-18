@@ -1,0 +1,19 @@
+.container {
+  height: 100px;
+  margin: 0 auto;
+
+  @include pageSize(mobile) {
+    border: 2px solid red;
+    padding: 0 5px;
+  }
+
+  @include pageSize(tablet) {
+    border: 2px solid yellow;
+    padding: 0 10px;
+  }
+
+  @include pageSize(desktop) {
+    border: 2px solid green;
+    padding: 0 20px;
+  }
+}

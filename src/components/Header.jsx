@@ -16,7 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { ThemeProvider } from "@mui/material/styles";
 import { headerTheme } from "../styles/components/header";
 
-const pages = ["Про нас", "Наші послуги", "Відгуки"];
+const pages = ["Про нас", "Ціни", "Замовити послугу", "Відгуки"];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

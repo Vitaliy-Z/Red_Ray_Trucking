@@ -24,7 +24,7 @@ export default function BoxBG() {
         inheritViewBox
         sx={{
           display: "block",
-          margin: { xs: "0 auto", sm: 0 },
+          margin: { xs: "0 0 0 auto", sm: 0 },
           fontSize: { xs: "10rem", sm: "12rem", md: "15rem" }
         }}
       />

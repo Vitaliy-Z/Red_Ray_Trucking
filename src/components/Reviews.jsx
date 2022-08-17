@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Container,
   Box,
   Typography,
   List,
@@ -8,6 +7,7 @@ import {
   ListItemAvatar,
   Avatar
 } from "@mui/material";
+import Title from "./Title";
 
 const revs = [
   {
@@ -31,30 +31,16 @@ const revs = [
 
 export default function Reviews() {
   return (
-    <Container
-      maxWidth="lg"
-      sx={{ padding: "40px 0", backgroundColor: "#f8f9fa" }}
-    >
-      <Typography
-        variant="h2"
-        sx={{
-          marginBottom: "30px",
-          textAlign: "center",
-          fontSize: { xs: "1.8em", sm: "2em" },
-          fontStyle: "italic",
-          textShadow: "2px 3px 3px #000",
-          color: "red"
-        }}
-      >
-        Відгуки
-      </Typography>
+    <Box sx={{ padding: "40px 0", backgroundColor: "#fff" }}>
+      <Title text="Відгуки" />
 
       <List
         sx={{
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
-          gap: "2vw"
+          gap: "2vw",
+          margin: "50px auto 0 auto"
         }}
       >
         {revs.map((r, i) => (
@@ -76,8 +62,8 @@ export default function Reviews() {
                   display: "inline-block",
                   marginBottom: "5px",
                   fontSize: "1.1rem",
-                  borderBottom: "1px solid red",
-                  borderRadius: "20%"
+                  fontFamily: "Montserrat",
+                  fontWeight: 600
                 }}
               >
                 {r.name}
@@ -85,7 +71,8 @@ export default function Reviews() {
               <Typography
                 sx={{
                   fontSize: "1em",
-                  fontStyle: "italic"
+                  fontStyle: "italic",
+                  fontFamily: "Montserrat"
                 }}
               >
                 " {r.text} "
@@ -94,6 +81,6 @@ export default function Reviews() {
           </ListItem>
         ))}
       </List>
-    </Container>
+    </Box>
   );
 }

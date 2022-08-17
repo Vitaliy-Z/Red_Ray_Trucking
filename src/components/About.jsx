@@ -1,5 +1,7 @@
 import React from "react";
-import { Container, Box, Divider, Typography } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
+import Title from "./Title";
+import BtnOrder from "./BtnOrder";
 
 const descrCar = [
   { title: "Об`єм", value: "20 м3" },
@@ -13,20 +15,7 @@ const descrCar = [
 export default function About() {
   return (
     <>
-      <Divider
-        sx={{ width: "20vw", margin: "20px auto 0 auto ", borderColor: "red" }}
-      />
-      <Typography
-        sx={{
-          textAlign: "center",
-          fontSize: "1.5rem",
-          fontStyle: "italic",
-          color: "#001E3C"
-        }}
-      >
-        Renault Master Тент 2200 кг
-      </Typography>
-      <Divider sx={{ width: "40vw", margin: "0 auto", borderColor: "red" }} />
+      <Title text="Renault Master Тент 2200 кг" />
       <Container
         maxWidth="lg"
         sx={{ display: { md: "flex" }, alignItems: "center" }}
@@ -51,40 +40,46 @@ export default function About() {
         <Box
           sx={{
             padding: "10px"
-
-            // border: "2px solid blue"
           }}
         >
           <Typography
-            sx={{ fontSize: "1.1em", fontWeight: "bold", fontStyle: "italic" }}
+            sx={{
+              fontSize: "1.3em",
+              fontFamily: "Montserrat",
+              fontWeight: "bold"
+            }}
           >
-            Розміри вантажного простору і вантажопідйомність
+            Розміри вантажного простору і вантажопідйомність:
           </Typography>
           <ul>
             {descrCar.map((v, i) => (
               <li key={i}>
                 <Typography
                   sx={{
-                    fontStyle: "italic",
-                    marginBottom: " 5px"
+                    marginBottom: "5px",
+                    fontFamily: "Montserrat",
+                    fontSize: "1.1em"
                   }}
                 >
-                  {v.title}
+                  {v.title}:
                   {v.value && (
                     <span
                       style={{
-                        fontSize: "1.1em",
+                        marginLeft: "5px",
+                        fontFamily: "Montserrat",
+                        fontSize: "1.15em",
                         fontWeight: "bold",
-                        fontStyle: "normal"
+                        fontStyle: "italic"
                       }}
                     >
-                      : {v.value}
+                      {v.value}
                     </span>
                   )}
                 </Typography>
               </li>
             ))}
           </ul>
+          <BtnOrder mx="auto" />
         </Box>
       </Container>
     </>
